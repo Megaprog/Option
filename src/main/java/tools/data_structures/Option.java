@@ -75,6 +75,19 @@ public abstract class Option<T> implements Serializable, Iterable<T> {
         return getOrElse(null);
     }
 
+    /**
+     * Возвращает обрамленное значение, если опция не пуста, иначе бросает исключение
+     * @param e исключение
+     */
+    public T getOrException(RuntimeException e) {
+        if (isDefined()) {
+            return get();
+        }
+        else {
+            throw e;
+        }
+    }
+
     @Override
     public Iterator<T> iterator() {
         return isEmpty() ? Collections.<T>emptyList().iterator() : Collections.singletonList(get()).iterator();
