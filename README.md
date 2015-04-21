@@ -1,4 +1,3 @@
-Option
-======
+# Option
 
-Java Option like Scala Option
+Java Option implementation like Scala one

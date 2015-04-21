@@ -1,4 +1,4 @@
-package tools.data_structures;
+package org.jmmo;
 
 import java.io.Serializable;
 import java.util.Collections;
@@ -88,7 +88,6 @@ public abstract class Option<T> implements Serializable, Iterable<T> {
         }
     }
 
-    @Override
     public Iterator<T> iterator() {
         return isEmpty() ? Collections.<T>emptyList().iterator() : Collections.singletonList(get()).iterator();
     }
